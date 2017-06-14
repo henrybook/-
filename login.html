@@ -4,8 +4,12 @@
       <title>Henry Book Login</title>
     </head>
     <body>
+       <input placeholder="Username" id="username" type="text"><br>
+       <input placeholder="Password" id="password" type="password"><br>
+       <button class="base btn" onclick="checkPass()">Login!</button>
     </body>
     <script>
+      var logins = ["henry:henry"]
       function checkPass() {
  if (contains(logins,btoa(document.getElementById('username').value + ':' + document.getElementById('password').value))) {
                  document.cookie = "login=true";
