@@ -9,16 +9,17 @@
        <button class="base btn" onclick="checkPass()">Login!</button>
     </body>
     <script>
-      var logins = ["henry:henry"]
+      var usernames = ["henry"]
       function checkPass() {
         if (document.getElementById('username').value = "henry") {
+          if (document.getElementById('username').value = "henry") {
           document.cookie = "login=true";
           document.cookie = "name=" + document.getElementById('username').value;
-
           alert("You are now logged in!");
         } else {
           alert("Username or password is incorrect.");
         }
       }
+    }
     </script>
 </html>
