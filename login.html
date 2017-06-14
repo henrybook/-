@@ -11,9 +11,10 @@
     <script>
       var logins = ["henry:henry"]
       function checkPass() {
- if (contains(logins,btoa(document.getElementById('username').value + ':' + document.getElementById('password').value))) {
+ if (contains(logins(document.getElementById('username').value + ':' + document.getElementById('password').value))) {
                  document.cookie = "login=true";
                  document.cookie = "name=" + document.getElementById('username').value;
+   alert("You are now logged in!");
            } else {
   alert("Username or password is incorrect.");
  }
