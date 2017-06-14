@@ -1,1 +1,18 @@
-
+<DOCTYPE html>
+  <html>
+    <head>
+      <title>Henry Book Login</title>
+    </head>
+    <body>
+    </body>
+    <script>
+      function checkPass() {
+ if (contains(logins,btoa(document.getElementById('username').value + ':' + document.getElementById('password').value))) {
+                 document.cookie = "login=true";
+                 document.cookie = "name=" + document.getElementById('username').value;
+           } else {
+  alert("Username or password is incorrect.");
+ }
+}
+    </script>
+</html>
