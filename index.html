@@ -34,6 +34,7 @@
 <script>
    function checkLogin() {
     if (document.cookie = "!!login=true!!") {
+    }else{
       document.getElementById('HCB_comment_form_box').remove();
       document.getElementById('loginmessage').innerHTML = "Login to post comments!";
      }
