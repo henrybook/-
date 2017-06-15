@@ -6,7 +6,6 @@
   <body>
   <center>
     <h2 id="henrybook">Henry Book</h2>
-		<button onclick="checkLogin()">Check Login</button>
     <h4 id="loginmessage"></h4>
     <!-- begin wwww.htmlcommentbox.com -->
      <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Form</a> is loading comments...</div>
@@ -32,13 +31,12 @@
 </style>
 </div>
 <script>
-   function checkLogin() {
-    if (document.cookie = "!!login=true!!") {
-    } else {
+    if (document.cookie = "login=true") {
+	    alert("you are Logged in");
+      } else {
       document.getElementById('HCB_comment_form_box').remove();
       document.getElementById('loginmessage').innerHTML = "Login to post comments!";
      }
-    }
 </script>
 </html>
 
