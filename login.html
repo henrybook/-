@@ -9,13 +9,22 @@
        <button class="base btn" onclick="checkPass()">Login!</button>
     </body>
     <script>
-      var usernames = ["henry"]
-      function checkPass() {
-        if (contains(usernames(document.getElementById('username').value))) {
-          alert("You are now logged in!");
-        } else {
-          alert("Username or password is incorrect.");
+      var logins = ["aHltZW5vcHVzOnRpZXI=", "aGVucnk6cG9ydA==", "Z3JhcGhpbmdoYW5kaGVsZDp0SQ==", "bmVpbDpjYXQ=", "aGF5ZGVuOnF3ZXJ0eQ==", "cmFlZjp0aQ==", "bmFjaG9jaGVlc2UyMDE3Om1jY29ybWljaw==", "dmlvaXNhbmVyZDp0aQ==","ZmFydGJvYjpmYXJ0Ym9i"]
+      function contains(a, obj) {
+  for (var i = 0; i < a.length; i++) {
+        if (a[i] === obj) {
+            return true;
         }
-      }
+    }
+    return false;
+}
+      function checkPass() {
+   if (contains(logins,btoa(document.getElementById('username').value + ':' + document.getElementById('password').value))) {
+                 document.cookie = "login=true";
+                 document.cookie = "name=" + document.getElementById('username').value;
+		 window.location.href = "index.html";
+           } else {
+  alert("Username or password is incorrect.");
+ }
     </script>
 </html>
