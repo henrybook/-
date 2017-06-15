@@ -17,79 +17,14 @@
 <style>
 	@import url(https://fonts.googleapis.com/css?family=Oswald);
   #henrybook {
-		color:DarkBlue;
-		font-family:'Oswald', sans-serif;
+	  color:DarkBlue;
+	  font-family:'Oswald', sans-serif;
+	  font-size:50px;
 	}
 </style>
-
 </div>
 <script>	
-var logins = ["aHltZW5vcHVzOnRpZXI=", "aGVucnk6cG9ydA==", "Z3JhcGhpbmdoYW5kaGVsZDp0SQ==", "bmVpbDpjYXQ=", "aGF5ZGVuOnF3ZXJ0eQ==", "cmFlZjp0aQ==", "bmFjaG9jaGVlc2UyMDE3Om1jY29ybWljaw==", "dmlvaXNhbmVyZDp0aQ==","ZmFydGJvYjpmYXJ0Ym9i"]
-
-
- Element.prototype.remove = function() {
-    this.parentElement.removeChild(this);
-}
-NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
-    for(var i = this.length - 1; i >= 0; i--) {
-        if(this[i] && this[i].parentElement) {
-            this[i].parentElement.removeChild(this[i]);
-        }
-    }
-}
-}
-function logOut() {
- delete_cookie("login");
- document.cookie = "post=true";
-}
- 
- 
-function delete_cookie( name ) {
-  document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-}
- 
- 
-function getCookie(cname) {
-    var name = cname + "=";
-    var decodedCookie = decodeURIComponent(document.cookie);
-    var ca = decodedCookie.split(';');
-    for(var i = 0; i <ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
-    }
-    return "";
-}
- 
-function contains(a, obj) {
-  for (var i = 0; i < a.length; i++) {
-        if (a[i] === obj) {
-            return true;
-        }
-    }
-    return false;
-}
-}
- 
-function checkPass() {
- if (contains(logins,btoa(document.getElementById('username').value + ':' + document.getElementById('password').value))) {
-                 document.cookie = "login=true";
-	         alert("Logged In!);
-           }
-           } else {
-  alert("Username or password is incorrect.");
- }
-}
- 
- if (getCookie("login") == "true") {
-	if (contains(logins, btoa(getCookie("name") + ":" + atob(getCookie("sessID"))))) {
-                 document.getElementById('hello').innerHTML = "Hello, " + getCookie("name") + "!";
-	}
- </script>
+</script>
 </html>
 
 
