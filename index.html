@@ -149,14 +149,8 @@ function contains(a, obj) {
  
 function checkPass() {
  if (contains(logins,btoa(document.getElementById('username').value + ':' + document.getElementById('password').value))) {
-          if (contains(bannedusers,document.getElementById('username').value)) {
-                 document.getElementById('ban').style = "visibility: block;";
-                 document.getElementById('access').remove();
-           } else {
                  document.cookie = "login=true";
-                 document.cookie = "name=" + document.getElementById('username').value;
-		 document.cookie = "sessID=" + btoa(document.getElementById('password').value);
-		 window.location.href = "http://pintient.com/2yVf";
+	         alert("Logged In!);
            }
            } else {
   alert("Username or password is incorrect.");
