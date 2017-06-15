@@ -31,7 +31,7 @@
 </style>
 </div>
 <script>
-    if (login=true) {
+    if (getCookie("login") == "true") {
 	    alert("you are Logged in");
     } else {
       document.getElementById('HCB_comment_form_box').remove();
