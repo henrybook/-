@@ -7,6 +7,7 @@
   <body>
   <center>
     <h2 id="henrybook">Henry Book</h2>
+    <h4 id="loginmessage"></h4>
      <!-- begin comment box -->
      <div id="HCB_comment_box">Loading comments...</div>
      <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
@@ -16,15 +17,27 @@
  </body>
 <style>
 	@import url(https://fonts.googleapis.com/css?family=Oswald);
+	*{
+		font-family:'Oswald';
+	}
         #henrybook {
 	  color:DarkBlue;
 	  font-family:'Oswald', sans-serif;
 	  font-size:50px;
 	}
+	#loginmessage {
+		color:DarkGray;
+	}
 
 </style>
 </div>
-<script>	
+<script>
+   function checkLogin() {
+    if () {
+      document.getElementById('HCB_comment_form_box').remove();
+      document.getElementById('loginmessage').innerHTML = "Login to post comments!";
+     }
+    }
 </script>
 </html>
 
