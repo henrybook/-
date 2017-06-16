@@ -8,8 +8,8 @@
 	  <div id="blue">
     <h2 id="henrybook">Henry Book</h2>
     <div class="btn-group">
-  <button class="button" onclick="chat()">Button</button>
-  <button class="button">Button</button>
+  <button id="blue" class="button" onclick="chat()">Button</button>
+  <button id="white" class="button">Button</button>
 	  </div>
     </div>
     <br />
@@ -18,14 +18,20 @@
  </body>
 <style>
 	#blue {
-	   background-color: DarkBlue;	
+		background-color: DarkBlue;
+		color:white;
 	}
+	#white {
+	        background-color: white;
+		color:DarkBlue;
+	}
+	
 	@import url(https://fonts.googleapis.com/css?family=Oswald);
 	*{
 		font-family:'Oswald';
 	}
         #henrybook {
-	  color:white;
+	  
 	  width: 100%;
 	  background-color:DarkBlue;
 	  font-family:'Oswald', sans-serif;
@@ -35,7 +41,6 @@
 	  width:50%;	
 	}
 .btn-group .button {
-    background-color: DarkBlue; /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
