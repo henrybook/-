@@ -31,7 +31,10 @@
 </style>
 </div>
 <script>
-  
+var comment = document.getElementById('hcb_form_content').value;
+ if (comment.includes("casio") || comment.includes("Casio") || comment.includes("CASIO")) {
+  document.cookie = "mute=true";
+  alert("This is not a TI forum! If you like TI go to TiMedia");
 </script>
 </html>
 
